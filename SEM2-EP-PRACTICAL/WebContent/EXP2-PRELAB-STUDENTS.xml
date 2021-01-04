@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Students_info>
+	<student>
+		<regno>19003001</regno>
+		<name>Lakshmi</name>
+		<avg>92</avg>
+		<dob>29-04-2002</dob>
+		<time>9:00 am</time>
+		<mobileno>9849984900</mobileno>
+		<distinction>YES</distinction>
+	</student>
+	<student>
+		<regno>190030048</regno>
+		<name>vatsalya</name>
+		<avg>93</avg>
+		<dob>06-06-2002</dob>
+		<time>10:30 am</time>
+		<mobileno>8019293470</mobileno>
+		<distinction>YES</distinction>
+	</student>
+	<student>
+		<regno>19003004</regno>
+		<name>Amulya</name>
+		<avg>93</avg>
+		<dob>30-04-2001</dob>
+		<time>11:00 am</time>
+		<mobileno>8096650416</mobileno>
+		<distinction>YES</distinction>
+	</student>
+	<student>
+		<regno>19003010</regno>
+		<name>Sridevi</name>
+		<avg>95</avg>
+		<dob>01-09-2002</dob>
+		<time>1:00 pm</time>
+		<mobileno>9246459665</mobileno>
+		<distinction>YES</distinction>
+	</student>
+	<student >
+		<regno>19003091</regno>
+		<name>Sita</name>
+		<avg>93</avg>
+		<dob>26-06-2001</dob>
+		<time>9:30 am</time>
+		<mobileno>9988776655</mobileno>
+		<distinction>YES</distinction>
+	</student>
+</Students_info>
