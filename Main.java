@@ -35,7 +35,7 @@ public class Main {
 						
 						int a=sti.StudentInsert(stb);
 						if(a>0) {
-							System.out.println("Insertion sucessful !!!");
+							System.out.println("Insertion sucessful into the table!!!");
 						}
 						else {
 							System.out.println("Insertion failed !!!");
@@ -47,7 +47,7 @@ public class Main {
 					    	 stb.setRegno(regno);
 					    int b=sti.StudentDeletion(stb);
 					    if(b>0) {
-					    	System.out.println("Deletion sucessful !!!");
+					    	System.out.println("Deletion sucessful from the table !!!");
 					    }
 					    else {
 							System.out.println("Deletion failed !!!");
@@ -63,7 +63,7 @@ public class Main {
 					    	 stb.setName(name_update);
 					    	 int a1=sti.Studentupdation(stb);
 								if(a1>0) {
-									System.out.println("updation sucessful !!!");
+									System.out.println("updation sucessful for the given id !!!");
 								}
 								else {
 									System.out.println("updation failed !!!");
