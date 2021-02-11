@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+<style>
+.bordered {
+	padding: 20px;
+	width: 50%;
+	border: 5px solid black;
+	border-radius: 15px;
+	background-color: lightblue;
+	font-family: "Lucida Console", "Courier New", monospace;
+}
+
+input[type=text] {
+	width: 70%;
+	height: 30px;
+	border-radius: 10px;
+}
+
+input[type=password] {
+	width: 50%;
+	height: 30px;
+	border-radius: 10px;
+}
+
+td {
+	padding: 5px;
+}
+
+.ab {
+	text-align: "center";
+	color: red;
+}
+</style>
+<script>
+	function validate() {
+		var email = document.login_form.emailid.value;
+		var password = document.login_form.pd.value;
+		var symbol = email.indexOf('@');
+		var dot = email.lastIndexOf('.');
+		var len = email.length;
+		if (email == "") {
+			alert('Email must be filled');
+			return false;
+		}
+		if (password == "") {
+			alert('Password must be filled');
+			return false;
+		}
+		if (email.length < 8) {
+			alert("Email must be min 8 characters");
+			return false;
+		}
+
+		if (symbol == -1 && dot == -1) {
+			alert("Enter Valid EmailID");
+			return false;
+		} else if ((parseInt(dot) - parseInt(symbol)) == 1) {
+			alert("Enter Valid EmailID");
+			return false;
+		} else if ((parseInt(len) - parseInt(dot) - 1) < 2) {
+			alert("Enter Valid EmailID");
+			return false;
+		}
+
+	}
+</script>
+</head>
+<body>
+	<h1 align="center" class="ab">LOGIN</h1>
+	<form name="login_form" method="post" onsubmit="return validate()" action="login">
+		<table align="center" class="bordered">
+			<tr>
+				<td>Email Id :</td>
+				<td><input type="text" name="emailid"></td>
+			</tr>
+			<br>
+			<tr>
+				<td>Password :</td>
+				<td><input type="password" name="pd"></td>
+			</tr>
+			<br>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Login"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

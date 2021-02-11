@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>FEEDBACK</title>
+<style>
+.bordered {
+    width:50%;
+    height: 100px;
+    padding: 20px;
+    border: 10px outset yellowgreen;
+  }
+.bc{
+	text-align:"center";
+	color:lightblue;
+}
+td{
+padding:10px;
+}
+</style>
+<script>
+function feedbackvalidations() {
+	var a = 0, rdbtn1=document.getElementsByName("q1");
+	var b = 0, rdbtn2=document.getElementsByName("q2");
+	var c = 0, rdbtn3=document.getElementsByName("q3");
+	var d = 0, rdbtn4=document.getElementsByName("q4");
+	var e = 0, rdbtn5=document.getElementsByName("q5");
+	
+	for(i=0;i<rdbtn1.length;i++) 
+	{
+		
+		if(rdbtn1.item(i).checked == false) 
+		{
+			a++;
+		}
+	}
+	if(a == rdbtn1.length)
+	{
+		alert("Please fill Question-1 !!!!");
+		return false;
+	}
+	
+	for(j=0;j<rdbtn2.length;j++) 
+	{
+		
+		if(rdbtn2.item(j).checked == false) 
+		{
+			b++;
+		}
+	}
+	if(b == rdbtn2.length)
+	{
+		alert("Please fill Question-2 !!!!");
+		return false;
+	}
+	for(k=0;k<rdbtn3.length;k++) 
+	{
+		
+		if(rdbtn3.item(k).checked == false) 
+		{
+			c++;
+		}
+	}
+	if(c == rdbtn3.length)
+	{
+		alert("Please fill Question-3 !!!!");
+		return false;
+	}
+	for(l=0;l<rdbtn4.length;l++) 
+	{
+		
+		if(rdbtn4.item(l).checked == false) 
+		{
+			d++;
+		}
+	}
+	if(d == rdbtn4.length)
+	{
+		alert("Please fill Question-4 !!!!");
+		return false;
+	}
+	
+	for(m=0;m<rdbtn5.length;m++) 
+	{
+		
+		if(rdbtn5.item(m).checked == false) 
+		{
+			e++;
+		}
+	}
+	if(e == rdbtn5.length)
+	{
+		alert("Please fill Question-5 !!!!");
+		return false;
+	}
+	
+}
+</script>
+</head>
+<body>
+<h1  align="center" class="bc">WELCOME TO  FEEDBACK PORTAL</h1>
+<form name=feedbackform method="post" onsubmit="return feedbackvalidations()" action="Feedback">
+	<br>
+		<table align="center" class="bordered">
+			<tr>
+			<td>How do you rate overall teaching?<br><br><input type="radio" name="q1" value="excellent">Excellent &nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="q1" value="good">Good
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="q1" value="average">Average<br><br></td>
+			</tr>
+			<tr>
+			<td>How well the subject is covered in class ?<br><br><input type="radio" name="q2" value="excellent">Excellent &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q2" value="good">Good
+			&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q2" value="average">Average<br><br></td>
+			</tr>
+			<tr>
+			<td>
+			How do you rate overall English proficiency?<br><br><input type="radio" name="q3" value="excellent">Excellent &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q3" value="good">Good
+			&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q3" value="average">Average<br><br></td>
+			</td>
+			</tr>
+			<tr>
+			<td>
+			Do the faculty will be on time?<br><br><input type="radio" name="q4" value="always">Always &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q4" value="never">Never
+			&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q4" value="sometimes">Sometimes<br><br></td>
+			</td>
+			</tr>
+			<tr>
+			<td>
+			Do the faculty discussing any non relevant topics other than subject?<br><br><input type="radio" name="q5" value="always">Always &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q5" value="never">Never
+			&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q5" value="sometimes">Sometimes<br></td>
+			</td>			
+			</tr>
+			<tr>
+			<td>
+			 <p><label>REMARKS:<br>
+			 <textarea name = "remarks" rows = "4" cols = "36"></textarea>
+        </label></p>
+			</td>
+			</tr>
+			<tr>
+			<td><input type="submit" style='position: relative; left: 280px;' value="SUBMIT FEEDBACK"></td>
+			</tr>
+		</table>
+</form>
+</body>
+</html>

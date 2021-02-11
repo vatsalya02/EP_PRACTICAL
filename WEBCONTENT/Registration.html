@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration</title>
+<style>
+.bordered {
+    padding: 20px;
+    width:50%;
+    border: 5px solid black;
+    border-radius: 15px;
+    background-color:lightblue;
+    font-family: "Lucida Console", "Courier New", monospace;
+  }
+input[type=text]{
+  width:70%;
+  height:30px;
+  border-radius: 10px;
+}
+input[type=password]{
+  width:70%;
+  height:30px;
+  border-radius: 10px;
+}
+td{
+padding:5px;
+}
+.ab{
+	text-align:"center";
+	color:red;
+}
+</style>
+<script>
+	function validate() {
+		var name = document.reg_form.name.value;
+		var id = document.reg_form.regno.value;
+		var email = document.reg_form.email.value;
+		var year = document.reg_form.year.value;
+		var sec = document.reg_form.section.value;
+		var password = document.reg_form.pswd.value;
+
+		var symbol = email.indexOf('@');
+		var dot = email.lastIndexOf('.');
+		var len = email.length;
+
+		if (name == "") {
+			alert('Name must be filled');
+			return false;
+		}
+		if(id==""){
+			alert("Id must be filled");
+			return false;
+		}
+		if(email==""){
+			alert("Email must be filled");
+			return false;
+		}
+		if (year == "" ){
+			alert('year must be filled');
+			return false;
+		}
+		if(sec==""){
+			alert("Section must be filled");
+			return false;
+		}
+		if(password==""){
+			alert("password must be filled");
+			return false;
+		}
+		if (name.length < 8) {
+			alert("Name must be min 8 characters");
+			return false;
+		}
+		if (id.length < 3) {
+			alert("ID no must be min 8 digits");
+			return false;
+		}
+		if (email.length < 8) {
+			alert("Email must be min 8 characters");
+			return false;
+		}
+
+		if (symbol == -1 && dot == -1) {
+			alert("Enter Valid EmailID");
+			return false;
+		} else if ((parseInt(dot) - parseInt(symbol)) == 1) {
+			alert("Enter Valid EmailID");
+			return false;
+		} else if ((parseInt(len) - parseInt(dot) - 1) < 2) {
+			alert("Enter Valid EmailID");
+			return false;
+		}
+		if (name.length == pswd.length) {
+			alert("Welcome " + name);
+			return false;
+		}
+
+	}
+</script>
+</head>
+<body>
+<Body>
+	<h1 align="center" class="ab">REGISTRATION</h1>
+	<form name="reg_form" method="post" onsubmit="return validate()"
+		action="Registrtaion">
+		<br>
+		<table align="center" class="bordered">
+			<tr>
+				<td>Name of Student&nbsp;&nbsp;&nbsp;</td>
+				<td>: &nbsp;&nbsp;<input type="text" name="name"><br></td>&nbsp;&nbsp;&nbsp;&nbsp;
+			</tr>
+			<tr>
+				<td>Regd Number&nbsp;&nbsp;&nbsp;</td>
+				<td>: &nbsp;&nbsp;<input type="text" name="regno"><br></td>
+			</tr>
+			<tr>
+				<td>Email Id&nbsp;&nbsp;&nbsp;</td>
+				<td>: &nbsp;&nbsp;<input type="text" name="email"><br></td>
+			</tr>
+			<tr>
+				<td>YEAR&nbsp;&nbsp;&nbsp;</td>
+				<td>: &nbsp;&nbsp;<input type="text" name="year"><br></td>
+			</tr>
+			<tr>
+				<td>SECTION&nbsp;&nbsp;&nbsp;</td>
+				<td>: &nbsp;&nbsp;<input type="text" name="section"><br></td>
+			</tr>
+			<tr>
+				<td>PASSWORD&nbsp;&nbsp;&nbsp;</td>
+				<td>: &nbsp;&nbsp;<input type="password" name="pswd"><br></td>
+			</tr>
+			
+			<tr>
+			<td><input type="submit" style='position: relative; left: 300px;' value="SUBMIT"></td>
+			</tr>
+			<tr>
+			<td></td>
+			<td><p>Already Registered?<a href="login.html">Login</a></p></td>
+			</tr>
+			
+		</table>
+	</form>
+
+</body>
+</html>
